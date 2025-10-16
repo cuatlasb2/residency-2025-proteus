@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TouchOSC → Browser Example</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #moving-element {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      font-size: 16px;
+      width: 100px;
+      display: block;
+      background-color: Chartreuse;
+    }
+  </style>
+</head>
+<body>
+  <h1>TouchOSC → Browser Example</h1>
+  <p id="output">Waiting for OSC...</p>
+  <p id="moving-element">Moving Element</p>
+
+  <script>
+    // create socket connection
+    const socket = io();
+
+    // when the socket receives a message, do stuff!
+    socket.on("osc", (msg) => {
+      // check the console to see what is actually being sent
+      console.log("OSC in browser:", msg);
+
+      // display output in DOM text
+      document.getElementById("output").textContent =
+        `Address: ${msg.address}, Args: ${JSON.stringify(msg.args)}`;
+      
+      // get the element we want to move
+      let p = document.querySelector("#moving-element");
+
+      // change element position
+      // adjust these to the name of your osc message sender
+      // This example uses TouchOSC app Automat5 tab 3 example
+      if(msg.address === "/3/xyM_l") {
+        let x = msg.args[1] * window.innerWidth; // yes x being 1 and not 0 is diabolical, but that is from the touchOSC x/y pad
+        let y = window.innerHeight - msg.args[0] * window.innerHeight; // invert the mapping might be necessary, depends on your OSC value
+        p.style.left = x + "px";
+        p.style.top = y + "px";
+      }
+
+      // change element appearance
+      if(msg.address === "/faderM") {
+        let f = msg.args[0];
+        p.style.opacity = f;
+        p.innerHTML = "Moving Element " + f.toFixed(3);
+      }
+    });
+  </script>
+</body>
+</html>

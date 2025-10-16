@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TouchOSC → Browser Demo</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>TouchOSC Demo</h1>
+  <p id="output">Waiting for OSC...</p>
+
+  <script>
+    // create socket connection
+    const socket = io();
+
+    // when the socket receives a message, do stuff!
+    socket.on("osc", (msg) => {
+      console.log("OSC in browser:", msg);
+
+      // display output in DOM text
+      document.getElementById("output").textContent =
+        `Address: ${msg.address}, Args: ${JSON.stringify(msg.args)}`;
+    });
+  </script>
+</body>
+</html>
