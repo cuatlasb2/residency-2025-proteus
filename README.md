@@ -1,5 +1,7 @@
 # residency-2025-proteus
 
+[![video documentation of proteus residency at B2](https://img.youtube.com/vi/fiz-EPAGUEg?si=JlJZJnTmQs5YZiQT/0.jpg)](https://www.youtube.com/watch?v=fiz-EPAGUEg?si=JlJZJnTmQs5YZiQT)
+
 # OSC to Web Browser
 
 Here is an example for how to use the Qualisys tracking system rigid body objects and use them as pointers for a web browser based experience. 
