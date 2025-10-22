@@ -1,6 +1,6 @@
 # residency-2025-proteus
 
-[![video documentation of proteus residency at B2](https://img.youtube.com/vi/fiz-EPAGUEg?si=JlJZJnTmQs5YZiQT/0.jpg)](https://www.youtube.com/watch?v=fiz-EPAGUEg?si=JlJZJnTmQs5YZiQT)
+[![video documentation of proteus residency at B2](https://img.youtube.com/vi/fiz-EPAGUEg/0.jpg)](https://www.youtube.com/watch?v=fiz-EPAGUEg)
 
 # OSC to Web Browser
 
