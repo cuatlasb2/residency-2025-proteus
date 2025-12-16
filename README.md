@@ -1,6 +1,15 @@
 # residency-2025-proteus
 
+# Video Documentation:
+
 [![video documentation of proteus residency at B2](https://img.youtube.com/vi/fiz-EPAGUEg/0.jpg)](https://www.youtube.com/watch?v=fiz-EPAGUEg)
+
+# Notes from B2 Staff:
+
+The EulerRayCast.maxpat can use mocap 6DOF objects to put video projections where users 'point' on the scrim. 
+Video and Audio assets on B2's OneDrive [Assets - GitHub > 250905 - Proteus Spatiotemporal Manipulations]
+
+# Notes from B2 Resident (David Hunter):
 
 # OSC to Web Browser
 
