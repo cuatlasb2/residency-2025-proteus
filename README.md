@@ -6,7 +6,8 @@
 
 # Notes from B2 Staff:
 
-The EulerRayCast.maxpat can use mocap 6DOF objects to put video projections where users 'point' on the scrim. 
+The EulerRayCast.maxpat can use mocap 6DOF objects to put video projections where users 'point' on the scrim.
+ 
 Video and Audio assets on B2's OneDrive [Assets - GitHub > 250905 - Proteus Spatiotemporal Manipulations]
 
 # Notes from B2 Resident (David Hunter):
@@ -67,16 +68,16 @@ The terminal should spit out the OSC server port and the address for index.html,
 
 Load `http://localhost:3000` into the browser window and you should see index.html, see below:
 
-![osc not yet connected](/assets/osc-to-web-1.png)  
+![osc not yet connected](/assets_DH/osc-to-web-1.png)  
 
 
 When you interact with the OSC controller see OSC messages appear on the webpage and move the element around. OSC messages should also appear in the terminal and the console.
 
-![osc connected and controlling element location and opacity](/assets/osc-to-web-2.png)
+![osc connected and controlling element location and opacity](/assets_DH/osc-to-web-2.png)
 
 Make sure you have set TouchOSC correctly with host IP, port, and the Automat5 template tab 3. Here is an image of of the TouchOSC screen
 
-![TouchOSC Automat5 template, tab 3](/assets/TouchOSC-Automat5-Tab3.PNG)
+![TouchOSC Automat5 template, tab 3](/assets_DH/TouchOSC-Automat5-Tab3.PNG)
 
 - - -
 
